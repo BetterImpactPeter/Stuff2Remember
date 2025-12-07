@@ -1,0 +1,983 @@
+Build 'Volunteer Squared 4.0 / Pull Request Builds / Pull Request Build - Unit Tests' #6146, branch '3115'
+Triggered 2025-12-07 08:03:55 by 'Git'
+Started 2025-12-07 08:03:58 on agent 'TCagent03'
+Finished 2025-12-07 08:04:36 with status FAILURE 'Exit code 1 (Step: Check for project include files that are missing (PowerShell))'
+VCS revisions: 'VolunteerSquared40_GitHubPullRequests' (Git, instance id 3): '3d509a6aab7d6826bd2b851dfed79b1655cfa173' (branch: 'refs/pull/3115/head')
+TeamCity URL http://itchy.dev.betterimpact.com:8111/buildConfiguration/VolunteerSquared40_SolutionBuildPullRequests/854 
+TeamCity server version is 2025.07.3 (build 197398), server timezone: EST (UTC-05:00)
+Log entries are grouped by flowIds, so they might not be fully ordered by timestamps
+
+[08:03:56]E: bt2 (40s)
+[08:03:56]i: TeamCity server version is 2025.07.3 (build 197398)
+[08:03:56] : Finalize build settings
+[08:03:56] : The build is removed from the queue to be prepared for the start
+[08:03:56] : Collecting changes in 1 VCS root (1s)
+[08:03:56] :	 [Collecting changes in 1 VCS root] VCS Root details
+[08:03:56] :		 [VCS Root details] "GitHub-PullRequests" {instance id=3, parent internal id=3, parent id=VolunteerSquared40_GitHubPullRequests, description: "git@github.com:BetterImpact/volunteersquared4.git#refs/heads/dev"}
+[08:03:56]i:	 [Collecting changes in 1 VCS root] Loading current repository state for VCS root 'GitHub-PullRequests' (1s)
+[08:03:56]i:		 [Loading current repository state for VCS root 'GitHub-PullRequests'] VCS root 'GitHub-PullRequests': git -c credential.helper= -c credential.helper=C:/TeamCity/temp/cred10032797348987278752.bat ls-remote origin
+[08:03:56]i:		 [Loading current repository state for VCS root 'GitHub-PullRequests'] VCS root 'GitHub-PullRequests': Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+[08:03:57]i:	 [Collecting changes in 1 VCS root] Detecting changes in VCS root 'GitHub-PullRequests' (used in 'Pull Request Build - Unit Tests')
+[08:03:57]i:	 [Collecting changes in 1 VCS root] Will collect changes for 'GitHub-PullRequests' starting from revision c8f294a6bf2741adb21b7a8dee8db11c6ede541b
+[08:03:57] : Compute revision for 'GitHub-PullRequests'
+[08:03:57] :	 [Compute revision for 'GitHub-PullRequests'] Upper limit revision: 3d509a6aab7d6826bd2b851dfed79b1655cfa173
+[08:03:57]i:	 [Compute revision for 'GitHub-PullRequests'] MaxModId = 560
+[08:03:57] :	 [Compute revision for 'GitHub-PullRequests'] Computed revision: 3d509a6aab7d6826bd2b851dfed79b1655cfa173
+[08:03:58] : Starting the build on the agent "TCagent03"
+[08:03:58]i: Agent time zone: America/New_York
+[08:03:58]i: Agent is running under JRE: 21.0.6+7-LTS
+[08:03:58] : Updating tools for build
+[08:03:58] :	 [Updating tools for build] Found 2 tools used by the build: NuGet.CommandLine.4.5.1, NUnit.Console.3.20.2
+[08:03:58] :	 [Updating tools for build] All used tools are up-to-date
+[08:03:58] : Clearing temporary directory: C:\BuildAgent\temp\buildTmp
+[08:03:58] : Publishing internal artifacts
+[08:03:58] :	 [Publishing internal artifacts] Publishing 1 file using [WebPublisher]
+[08:03:58] :	 [Publishing internal artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]
+[08:03:58]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[08:03:59] : Using vcs information from agent file: f4d5092a_TeamCity_PullRequests.xml
+[08:03:59] : Checkout directory: C:\TeamCity_PullRequests
+[08:03:59] : Updating sources: agent side checkout (6s)
+[08:03:59] :	 [Updating sources] VCS Root: GitHub-PullRequests (6s)
+[08:03:59] :		 [VCS Root: GitHub-PullRequests] revision: 3d509a6aab7d6826bd2b851dfed79b1655cfa173
+[08:03:59]i:		 [VCS Root: GitHub-PullRequests] Mirrors automatically enabled
+[08:03:59] :		 [VCS Root: GitHub-PullRequests] Git version: 2.51.2.0
+[08:03:59] :		 [VCS Root: GitHub-PullRequests] Update git mirror (C:\BuildAgent\system\git\git-28DB2058.git) (3s)
+[08:03:59] :			 [Update git mirror (C:\BuildAgent\system\git\git-28DB2058.git)] "C:\Program Files\Git\bin\git.exe" config http.sslCAInfo
+[08:04:00] :			 [Update git mirror (C:\BuildAgent\system\git\git-28DB2058.git)] "C:\Program Files\Git\bin\git.exe" show-ref
+[08:04:00] :			 [Update git mirror (C:\BuildAgent\system\git\git-28DB2058.git)] "C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred8453693465663860073.bat ls-remote origin
+[08:04:01] :			 [Update git mirror (C:\BuildAgent\system\git\git-28DB2058.git)] "C:\Program Files\Git\bin\git.exe" show-ref refs/pull/3115/head
+[08:04:01] :			 [Update git mirror (C:\BuildAgent\system\git\git-28DB2058.git)] "C:\Program Files\Git\bin\git.exe" log -n1 --pretty=format:%H%x20%s 3d509a6aab7d6826bd2b851dfed79b1655cfa173 --
+[08:04:01]i:			 [Update git mirror (C:\BuildAgent\system\git\git-28DB2058.git)] fatal: bad object 3d509a6aab7d6826bd2b851dfed79b1655cfa173
+[08:04:01] :			 [Update git mirror (C:\BuildAgent\system\git\git-28DB2058.git)] 'git fetch' required: commit '3d509a6aab7d6826bd2b851dfed79b1655cfa173' is not found in the local repository clone.
+[08:04:01] :			 [Update git mirror (C:\BuildAgent\system\git\git-28DB2058.git)] "C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head (1s)
+[08:04:03]i:				 ["C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head] remote: Enumerating objects: 6, done.        
+[08:04:03]i:				 ["C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head] remote: Counting objects:  16% (1/6)        
+[08:04:03]i:				 ["C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head] remote: Counting objects:  33% (2/6)        
+[08:04:03]i:				 ["C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head] remote: Counting objects:  50% (3/6)        
+[08:04:03]i:				 ["C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head] remote: Counting objects:  66% (4/6)        
+[08:04:03]i:				 ["C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head] remote: Counting objects:  83% (5/6)        
+[08:04:03]i:				 ["C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head] remote: Counting objects: 100% (6/6)        
+[08:04:03]i:				 ["C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head] remote: Counting objects: 100% (6/6), done.        
+[08:04:03]i:				 ["C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head] remote: Compressing objects:  50% (1/2)        
+[08:04:03]i:				 ["C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head] remote: Compressing objects: 100% (2/2)        
+[08:04:03]i:				 ["C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head] remote: Compressing objects: 100% (2/2), done.        
+[08:04:03]i:				 ["C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head] remote: Total 6 (delta 4), reused 6 (delta 4), pack-reused 0 (from 0)        
+[08:04:03]i:				 ["C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head] From github.com:BetterImpact/volunteersquared4
+[08:04:03]i:				 ["C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred14304876813044314459.bat fetch --progress --recurse-submodules=no origin +refs/pull/3115/head:refs/pull/3115/head]    ba84a530af..3d509a6aab  refs/pull/3115/head -> refs/pull/3115/head
+[08:04:03] :			 [Update git mirror (C:\BuildAgent\system\git\git-28DB2058.git)] "C:\Program Files\Git\bin\git.exe" log -n1 --pretty=format:%H%x20%s 3d509a6aab7d6826bd2b851dfed79b1655cfa173 --
+[08:04:03] :			 [Update git mirror (C:\BuildAgent\system\git\git-28DB2058.git)] "C:\Program Files\Git\bin\git.exe" pack-refs --all
+[08:04:03] :		 [VCS Root: GitHub-PullRequests] Update checkout directory (C:\TeamCity_PullRequests) (3s)
+[08:04:03] :			 [Update checkout directory (C:\TeamCity_PullRequests)] "C:\Program Files\Git\bin\git.exe" rev-parse --is-shallow-repository
+[08:04:03] :			 [Update checkout directory (C:\TeamCity_PullRequests)] "C:\Program Files\Git\bin\git.exe" config lfs.storage C:\BuildAgent\system\git\git-28DB2058.git\lfs
+[08:04:03] :			 [Update checkout directory (C:\TeamCity_PullRequests)] "C:\Program Files\Git\bin\git.exe" config core.sparseCheckout true
+[08:04:03] :			 [Update checkout directory (C:\TeamCity_PullRequests)] "C:\Program Files\Git\bin\git.exe" config http.sslCAInfo
+[08:04:04] :			 [Update checkout directory (C:\TeamCity_PullRequests)] "C:\Program Files\Git\bin\git.exe" show-ref
+[08:04:04] :			 [Update checkout directory (C:\TeamCity_PullRequests)] "C:\Program Files\Git\bin\git.exe" show-ref refs/pull/3115/head
+[08:04:04] :			 [Update checkout directory (C:\TeamCity_PullRequests)] "C:\Program Files\Git\bin\git.exe" log -n1 --pretty=format:%H%x20%s 3d509a6aab7d6826bd2b851dfed79b1655cfa173 --
+[08:04:04] :			 [Update checkout directory (C:\TeamCity_PullRequests)] No 'git fetch' required: commit '3d509a6aab7d6826bd2b851dfed79b1655cfa173' is in the local repository clone pointed by 'refs/pull/3115/head'.
+[08:04:04] :			 [Update checkout directory (C:\TeamCity_PullRequests)] "C:\Program Files\Git\bin\git.exe" -c credential.helper= -c credential.helper=C:/BuildAgent/temp/buildTmp/cred16393611300750323696.bat checkout -q -f 3d509a6aab7d6826bd2b851dfed79b1655cfa173
+[08:04:04] :			 [Update checkout directory (C:\TeamCity_PullRequests)] Cleaning GitHub-PullRequests in C:\TeamCity_PullRequests the file set ALL_UNTRACKED
+[08:04:04] :			 [Update checkout directory (C:\TeamCity_PullRequests)] "C:\Program Files\Git\bin\git.exe" clean -f -d -x
+[08:04:06] : Build preparation done
+[08:04:06] : Step 1/7: NuGet Installer (15s)
+[08:04:06] :	 [Step 1/7] scan: Searching for nuget.config files
+[08:04:06] :		 [scan] RepositoryPath was not extracted from NuGet.config file at C:\TeamCity_PullRequests\.nuget\NuGet.Config. Packages will be downloaded into default path: C:\TeamCity_PullRequests\packages.
+[08:04:06] :		 [scan] Found packages folder: C:\TeamCity_PullRequests\packages
+[08:04:06] :		 [scan] No repositories.config found at C:\TeamCity_PullRequests\packages\repositories.config
+[08:04:06] :		 [scan] Scanning projects in solution file: C:\TeamCity_PullRequests\VolunteerSquared.sln
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\Solution Items
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.Core\VolunteerSquared.Core.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.Infrastructure\VolunteerSquared.Infrastructure.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.Tasks\VolunteerSquared.Tasks.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.Resources\VolunteerSquared.Resources.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\tests\VolunteerSquared.IntegrationTests\VolunteerSquared.IntegrationTests.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\Tests
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\Common
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.Init\VolunteerSquared.Init.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\.nuget
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\tests\VolunteerSquared.UnitTests\VolunteerSquared.UnitTests.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\Reporting
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.Reports\VolunteerSquared.Reports.rptproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.ReportHelper\VolunteerSquared.ReportHelper.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\Web
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.Web\VolunteerSquared.Web.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\Emailing
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.BulkEmailSendingService.Contracts\VolunteerSquared.BulkEmailSendingService.Contracts.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.BulkEmailSendingService.Impl\VolunteerSquared.BulkEmailSendingService.Impl.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.BulkEmailSendingService.ServiceHost\VolunteerSquared.BulkEmailSendingService.ServiceHost.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\SupportingApplications
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.LocalTimeZoneRefresher\VolunteerSquared.LocalTimeZoneRefresher.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.ScheduleReminder\VolunteerSquared.ScheduleReminder.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.BouncedEmailService\VolunteerSquared.BouncedEmailService.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.LocalizationCustomizer\VolunteerSquared.LocalizationCustomizer.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.BulkEmailSendingService.Common\VolunteerSquared.BulkEmailSendingService.Common.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.FlickrIdLookup\VolunteerSquared.FlickrIdLookup.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.VerifiedVolunteersHrXmlObjects\VolunteerSquared.VerifiedVolunteersHrXmlObjects.csproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.FileResources\VolunteerSquared.FileResources.csproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.AlternateEnglishTranslationComparer\VolunteerSquared.AlternateEnglishTranslationComparer.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.SuperSearchAndReplace\VolunteerSquared.SuperSearchAndReplace.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\Database
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.DatabaseMigrations\VolunteerSquared.DatabaseMigrations.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.FastlyWafWildcardSyntaxUtility\VolunteerSquared.FastlyWafWildcardSyntaxUtility.vbproj
+[08:04:06] :		 [scan] Found project C:\TeamCity_PullRequests\src\VolunteerSquared.WebCalendarProvider\VolunteerSquared.WebCalendarProvider.vbproj
+[08:04:06] :	 [Step 1/7] install: Installing NuGet packages for src\VolunteerSquared.Web\packages.config (2s)
+[08:04:06] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\src\VolunteerSquared.Web\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:06] :		 [install] in directory: C:\TeamCity_PullRequests\src\VolunteerSquared.Web
+[08:04:07] :		 [install] Feeds used:
+[08:04:07] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:07] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:07] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:07] :		 [install] 
+[08:04:07] :		 [install] Restoring NuGet package AutoMapper.10.0.0.
+[08:04:07] :		 [install] Restoring NuGet package AjaxMin.5.14.5506.26202.
+[08:04:07] :		 [install] Restoring NuGet package Castle.Core.4.4.0.
+[08:04:07] :		 [install] Restoring NuGet package Antlr3.Runtime.3.5.1.
+[08:04:07] :		 [install] Restoring NuGet package combres.2.3.0.4.
+[08:04:07] :		 [install] Restoring NuGet package combres.mvc.2.3.0.4.
+[08:04:07] :		 [install] Restoring NuGet package Castle.Windsor.5.0.0.
+[08:04:07] :		 [install] Restoring NuGet package CommonServiceLocator.2.0.4.
+[08:04:07] :		 [install] Adding package 'Antlr3.Runtime.3.5.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Castle.Windsor.5.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'AutoMapper.10.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'CommonServiceLocator.2.0.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'combres.mvc.2.3.0.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Castle.Core.4.4.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'combres.2.3.0.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'AjaxMin.5.14.5506.26202' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'combres.mvc.2.3.0.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package dotless.1.4.1.
+[08:04:07] :		 [install] Added package 'CommonServiceLocator.2.0.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package DuoUniversal.1.3.1.
+[08:04:07] :		 [install] Adding package 'dotless.1.4.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'AutoMapper.10.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'DuoUniversal.1.3.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package EcmaScript.Net.1.0.1.
+[08:04:07] :		 [install] Adding package 'EcmaScript.Net.1.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'combres.2.3.0.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package elmah.corelibrary.1.2.2.
+[08:04:07] :		 [install] Adding package 'elmah.corelibrary.1.2.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'DuoUniversal.1.3.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Elmah.Mvc.2.1.2.
+[08:04:07] :		 [install] Adding package 'Elmah.Mvc.2.1.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Castle.Windsor.5.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Antlr3.Runtime.3.5.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package EnyimMemcached.2.16.0.
+[08:04:07] :		 [install] Restoring NuGet package evopdf.7.5.0.
+[08:04:07] :		 [install] Adding package 'EnyimMemcached.2.16.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'evopdf.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'EcmaScript.Net.1.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'elmah.corelibrary.1.2.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package fasterflect.2.1.3.
+[08:04:07] :		 [install] Restoring NuGet package Hangfire.1.8.22.
+[08:04:07] :		 [install] Added package 'Elmah.Mvc.2.1.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Hangfire.AspNet.0.3.0.
+[08:04:07] :		 [install] Adding package 'fasterflect.2.1.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Hangfire.1.8.22' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'dotless.1.4.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Hangfire.Core.1.8.22.
+[08:04:07] :		 [install] Adding package 'Hangfire.AspNet.0.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Hangfire.Core.1.8.22' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'EnyimMemcached.2.16.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Hangfire.Pro.3.0.4.
+[08:04:07] :		 [install] Adding package 'Hangfire.Pro.3.0.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Hangfire.AspNet.0.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Hangfire.SqlServer.1.8.22.
+[08:04:07] :		 [install] Added package 'Hangfire.1.8.22' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Hangfire.Throttling.1.4.0.
+[08:04:07] :		 [install] Adding package 'Hangfire.SqlServer.1.8.22' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'AjaxMin.5.14.5506.26202' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Hangfire.Windsor.2.0.1.
+[08:04:07] :		 [install] Added package 'fasterflect.2.1.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Hangfire.Throttling.1.4.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Iesi.Collections.4.1.1.
+[08:04:07] :		 [install] Adding package 'Hangfire.Windsor.2.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Castle.Core.4.4.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package ImageResizer.4.1.10.
+[08:04:07] :		 [install] Adding package 'Iesi.Collections.4.1.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'ImageResizer.4.1.10' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Hangfire.Windsor.2.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package ImageResizer.MvcWebConfig.4.1.10.
+[08:04:07] :		 [install] Adding package 'ImageResizer.MvcWebConfig.4.1.10' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'ImageResizer.MvcWebConfig.4.1.10' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package ImageResizer.Plugins.SimpleFilters.4.1.10.
+[08:04:07] :		 [install] Adding package 'ImageResizer.Plugins.SimpleFilters.4.1.10' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Hangfire.Pro.3.0.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package ImageResizer.Plugins.Wic.4.1.10.
+[08:04:07] :		 [install] Added package 'Hangfire.Throttling.1.4.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package ImageResizer.WebConfig.4.1.10.
+[08:04:07] :		 [install] Added package 'ImageResizer.4.1.10' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package jQuery.1.9.0.
+[08:04:07] :		 [install] Adding package 'ImageResizer.Plugins.Wic.4.1.10' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'ImageResizer.WebConfig.4.1.10' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'jQuery.1.9.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'ImageResizer.Plugins.SimpleFilters.4.1.10' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.AspNet.Mvc.5.2.3.
+[08:04:07] :		 [install] Added package 'ImageResizer.WebConfig.4.1.10' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.AspNet.Mvc.FixedDisplayModes.5.0.0.
+[08:04:07] :		 [install] Added package 'ImageResizer.Plugins.Wic.4.1.10' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Microsoft.AspNet.Mvc.5.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.AspNet.Razor.3.2.3.
+[08:04:07] :		 [install] Adding package 'Microsoft.AspNet.Mvc.FixedDisplayModes.5.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Microsoft.AspNet.Razor.3.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.AspNet.Mvc.FixedDisplayModes.5.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.AspNet.WebApi.5.2.3.
+[08:04:07] :		 [install] Added package 'Iesi.Collections.4.1.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.AspNet.WebApi.Client.5.2.3.
+[08:04:07] :		 [install] Adding package 'Microsoft.AspNet.WebApi.5.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Microsoft.AspNet.WebApi.Client.5.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.AspNet.WebApi.5.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.AspNet.WebApi.Core.5.2.3.
+[08:04:07] :		 [install] Added package 'Hangfire.SqlServer.1.8.22' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.AspNet.WebApi.WebHost.5.2.3.
+[08:04:07] :		 [install] Adding package 'Microsoft.AspNet.WebApi.Core.5.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.AspNet.Razor.3.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.AspNet.WebPages.3.2.3.
+[08:04:07] :		 [install] Adding package 'Microsoft.AspNet.WebApi.WebHost.5.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'jQuery.1.9.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.Bcl.AsyncInterfaces.8.0.0.
+[08:04:07] :		 [install] Adding package 'Microsoft.AspNet.WebPages.3.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Microsoft.Bcl.AsyncInterfaces.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.AspNet.Mvc.5.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.Extensions.Configuration.3.0.0.
+[08:04:07] :		 [install] Added package 'Microsoft.AspNet.WebApi.WebHost.5.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.Extensions.Configuration.Abstractions.3.0.0.
+[08:04:07] :		 [install] Adding package 'Microsoft.Extensions.Configuration.3.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Microsoft.Extensions.Configuration.Abstractions.3.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.AspNet.WebApi.Client.5.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.Extensions.Configuration.Binder.3.0.0.
+[08:04:07] :		 [install] Adding package 'Microsoft.Extensions.Configuration.Binder.3.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.AspNet.WebApi.Core.5.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.Extensions.DependencyInjection.3.0.0.
+[08:04:07] :		 [install] Adding package 'Microsoft.Extensions.DependencyInjection.3.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.Extensions.Configuration.3.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.Extensions.DependencyInjection.Abstractions.8.0.1.
+[08:04:07] :		 [install] Added package 'Microsoft.Extensions.Configuration.Abstractions.3.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Microsoft.Extensions.DependencyInjection.Abstractions.8.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.Extensions.Logging.3.0.0.
+[08:04:07] :		 [install] Adding package 'Microsoft.Extensions.Logging.3.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.AspNet.WebPages.3.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.Extensions.Configuration.Binder.3.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.Extensions.Logging.Abstractions.8.0.1.
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.Extensions.Options.3.0.0.
+[08:04:07] :		 [install] Added package 'Microsoft.Bcl.AsyncInterfaces.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.Extensions.Primitives.3.0.0.
+[08:04:07] :		 [install] Adding package 'Microsoft.Extensions.Options.3.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Microsoft.Extensions.Logging.Abstractions.8.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Microsoft.Extensions.Primitives.3.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.Extensions.Logging.3.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.IdentityModel.Abstractions.7.6.0.
+[08:04:07] :		 [install] Added package 'Microsoft.Extensions.DependencyInjection.3.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.IdentityModel.JsonWebTokens.7.6.0.
+[08:04:07] :		 [install] Adding package 'Microsoft.IdentityModel.Abstractions.7.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Microsoft.IdentityModel.JsonWebTokens.7.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.Extensions.Options.3.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.IdentityModel.Logging.7.6.0.
+[08:04:07] :		 [install] Added package 'Microsoft.Extensions.Primitives.3.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.IdentityModel.Tokens.7.6.0.
+[08:04:07] :		 [install] Adding package 'Microsoft.IdentityModel.Logging.7.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Microsoft.IdentityModel.Tokens.7.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.IdentityModel.Abstractions.7.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.Owin.4.2.2.
+[08:04:07] :		 [install] Added package 'Microsoft.Extensions.DependencyInjection.Abstractions.8.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.Owin.Host.SystemWeb.4.2.2.
+[08:04:07] :		 [install] Adding package 'Microsoft.Owin.4.2.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.IdentityModel.Logging.7.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Microsoft.Owin.Host.SystemWeb.4.2.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Microsoft.Web.Infrastructure.1.0.0.
+[08:04:07] :		 [install] Adding package 'Microsoft.Web.Infrastructure.1.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.Owin.4.2.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.Web.Infrastructure.1.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.IdentityModel.JsonWebTokens.7.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Moesif.Api.2.0.8.
+[08:04:07] :		 [install] Restoring NuGet package Moesif.Middleware.1.4.6.
+[08:04:07] :		 [install] Restoring NuGet package MvcThrottle.2.1.3.
+[08:04:07] :		 [install] Added package 'Microsoft.Owin.Host.SystemWeb.4.2.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package NewRelic.Agent.Api.10.19.2.
+[08:04:07] :		 [install] Adding package 'Moesif.Middleware.1.4.6' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'Moesif.Api.2.0.8' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'MvcThrottle.2.1.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'NewRelic.Agent.Api.10.19.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'MvcThrottle.2.1.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Newtonsoft.Json.13.0.2.
+[08:04:07] :		 [install] Adding package 'Newtonsoft.Json.13.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Moesif.Middleware.1.4.6' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package NHibernate.5.6.0.
+[08:04:07] :		 [install] Added package 'Moesif.Api.2.0.8' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package NHibernate.Cache.DynamicCacheBuster.2.1.0.
+[08:04:07] :		 [install] Adding package 'NHibernate.5.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'NHibernate.Cache.DynamicCacheBuster.2.1.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'NewRelic.Agent.Api.10.19.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package NHibernate.Caches.Common.5.9.0.
+[08:04:07] :		 [install] Adding package 'NHibernate.Caches.Common.5.9.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.IdentityModel.Tokens.7.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package NHibernate.Caches.EnyimMemcached.5.9.0.
+[08:04:07] :		 [install] Adding package 'NHibernate.Caches.EnyimMemcached.5.9.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'NHibernate.Cache.DynamicCacheBuster.2.1.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Owin.1.0.0.
+[08:04:07] :		 [install] Adding package 'Owin.1.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'NHibernate.Caches.Common.5.9.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Pipelines.Sockets.Unofficial.2.2.8.
+[08:04:07] :		 [install] Added package 'NHibernate.Caches.EnyimMemcached.5.9.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package QRCoder.1.4.1.
+[08:04:07] :		 [install] Adding package 'Pipelines.Sockets.Unofficial.2.2.8' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Owin.1.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'QRCoder.1.4.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package RecaptchaNet.2.1.0.
+[08:04:07] :		 [install] Adding package 'RecaptchaNet.2.1.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'RecaptchaNet.2.1.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Remotion.Linq.2.2.0.
+[08:04:07] :		 [install] Adding package 'Remotion.Linq.2.2.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'QRCoder.1.4.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package Remotion.Linq.EagerFetching.2.2.0.
+[08:04:07] :		 [install] Adding package 'Remotion.Linq.EagerFetching.2.2.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Microsoft.Extensions.Logging.Abstractions.8.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package RemoveASPNETheaders.1.0.0.7.
+[08:04:07] :		 [install] Adding package 'RemoveASPNETheaders.1.0.0.7' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Pipelines.Sockets.Unofficial.2.2.8' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package RestSharp.106.12.0.
+[08:04:07] :		 [install] Added package 'Remotion.Linq.EagerFetching.2.2.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package StackExchange.Redis.2.8.31.
+[08:04:07] :		 [install] Adding package 'RestSharp.106.12.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'StackExchange.Redis.2.8.31' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'RemoveASPNETheaders.1.0.0.7' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.Buffers.4.5.1.
+[08:04:07] :		 [install] Adding package 'System.Buffers.4.5.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Hangfire.Core.1.8.22' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.Collections.Immutable.7.0.0.
+[08:04:07] :		 [install] Adding package 'System.Collections.Immutable.7.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'Remotion.Linq.2.2.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.ComponentModel.Annotations.4.6.0.
+[08:04:07] :		 [install] Added package 'RestSharp.106.12.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.Diagnostics.DiagnosticSource.8.0.1.
+[08:04:07] :		 [install] Adding package 'System.ComponentModel.Annotations.4.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'System.Diagnostics.DiagnosticSource.8.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'System.Buffers.4.5.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.IdentityModel.Tokens.Jwt.7.6.0.
+[08:04:07] :		 [install] Adding package 'System.IdentityModel.Tokens.Jwt.7.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'System.Collections.Immutable.7.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.IO.4.3.0.
+[08:04:07] :		 [install] Added package 'Newtonsoft.Json.13.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.IO.Compression.4.3.0.
+[08:04:07] :		 [install] Adding package 'System.IO.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'System.IO.Compression.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'System.IdentityModel.Tokens.Jwt.7.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.IO.Pipelines.5.0.1.
+[08:04:07] :		 [install] Adding package 'System.IO.Pipelines.5.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'System.Diagnostics.DiagnosticSource.8.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.Memory.4.5.5.
+[08:04:07] :		 [install] Adding package 'System.Memory.4.5.5' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'System.IO.Pipelines.5.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.Net.Http.4.3.4.
+[08:04:07] :		 [install] Added package 'System.Memory.4.5.5' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.Net.Http.Json.5.0.0.
+[08:04:07] :		 [install] Adding package 'System.Net.Http.4.3.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'System.Net.Http.Json.5.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'StackExchange.Redis.2.8.31' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.Numerics.Vectors.4.5.0.
+[08:04:07] :		 [install] Adding package 'System.Numerics.Vectors.4.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'System.Net.Http.Json.5.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.Runtime.4.3.0.
+[08:04:07] :		 [install] Adding package 'System.Runtime.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'System.ComponentModel.Annotations.4.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.Runtime.CompilerServices.Unsafe.6.0.0.
+[08:04:07] :		 [install] Added package 'System.IO.Compression.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.Security.Cryptography.Algorithms.4.3.0.
+[08:04:07] :		 [install] Added package 'System.Net.Http.4.3.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'System.Runtime.CompilerServices.Unsafe.6.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.Security.Cryptography.Encoding.4.3.0.
+[08:04:07] :		 [install] Adding package 'System.Security.Cryptography.Algorithms.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Adding package 'System.Security.Cryptography.Encoding.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Added package 'System.Numerics.Vectors.4.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:07] :		 [install] Restoring NuGet package System.Security.Cryptography.Primitives.4.3.0.
+[08:04:07] :		 [install] Adding package 'System.Security.Cryptography.Primitives.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'System.Runtime.CompilerServices.Unsafe.6.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package System.Security.Cryptography.X509Certificates.4.3.0.
+[08:04:08] :		 [install] Adding package 'System.Security.Cryptography.X509Certificates.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'System.IO.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package System.Text.Encoding.4.3.0.
+[08:04:08] :		 [install] Adding package 'System.Text.Encoding.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'System.Security.Cryptography.Primitives.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package System.Text.Encodings.Web.8.0.0.
+[08:04:08] :		 [install] Adding package 'System.Text.Encodings.Web.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'System.Security.Cryptography.Encoding.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package System.Text.Json.8.0.5.
+[08:04:08] :		 [install] Adding package 'System.Text.Json.8.0.5' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'System.Security.Cryptography.Algorithms.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package System.Threading.Channels.8.0.0.
+[08:04:08] :		 [install] Adding package 'System.Threading.Channels.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'System.Text.Encodings.Web.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package System.Threading.Tasks.Extensions.4.5.4.
+[08:04:08] :		 [install] Adding package 'System.Threading.Tasks.Extensions.4.5.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'System.Threading.Channels.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package System.ValueTuple.4.5.0.
+[08:04:08] :		 [install] Adding package 'System.ValueTuple.4.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'System.Security.Cryptography.X509Certificates.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package T4MVCExtensions.3.17.4.
+[08:04:08] :		 [install] Adding package 'T4MVCExtensions.3.17.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'System.Threading.Tasks.Extensions.4.5.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package T4MVCVB.3.7.7.
+[08:04:08] :		 [install] Added package 'T4MVCExtensions.3.17.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package Twilio.5.29.1.
+[08:04:08] :		 [install] Adding package 'T4MVCVB.3.7.7' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Adding package 'Twilio.5.29.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'System.Text.Encoding.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package Twilio.AspNet.Common.5.20.1.
+[08:04:08] :		 [install] Adding package 'Twilio.AspNet.Common.5.20.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'T4MVCVB.3.7.7' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package Twilio.AspNet.Mvc.5.20.1.
+[08:04:08] :		 [install] Adding package 'Twilio.AspNet.Mvc.5.20.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'Twilio.AspNet.Common.5.20.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package Twilio.TwiML.3.5.0.
+[08:04:08] :		 [install] Adding package 'Twilio.TwiML.3.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'Twilio.AspNet.Mvc.5.20.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package Unirest-APIMATIC.1.0.1.26.
+[08:04:08] :		 [install] Added package 'System.ValueTuple.4.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package WebActivatorEx.2.0.6.
+[08:04:08] :		 [install] Adding package 'Unirest-APIMATIC.1.0.1.26' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Adding package 'WebActivatorEx.2.0.6' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'Twilio.TwiML.3.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Restoring NuGet package YUICompressor.NET.2.7.0.
+[08:04:08] :		 [install] Added package 'WebActivatorEx.2.0.6' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Adding package 'YUICompressor.NET.2.7.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'YUICompressor.NET.2.7.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'Unirest-APIMATIC.1.0.1.26' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'System.Text.Json.8.0.5' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'Twilio.5.29.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'NHibernate.5.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:08] :		 [install] Added package 'System.Runtime.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:09] :		 [install] Added package 'evopdf.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:09] :		 [install] Process exited with code 0
+[08:04:09] :	 [Step 1/7] install: Installing NuGet packages for src\VolunteerSquared.LocalTimeZoneRefresher\packages.config
+[08:04:09] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\src\VolunteerSquared.LocalTimeZoneRefresher\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:09] :		 [install] in directory: C:\TeamCity_PullRequests\src\VolunteerSquared.LocalTimeZoneRefresher
+[08:04:10] :		 [install] Feeds used:
+[08:04:10] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:10] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:10] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:10] :		 [install] 
+[08:04:10] :		 [install] Restoring NuGet package DbExtensions.6.1.1.
+[08:04:10] :		 [install] Adding package 'DbExtensions.6.1.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:10] :		 [install] Added package 'DbExtensions.6.1.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:10] :		 [install] Process exited with code 0
+[08:04:10] :	 [Step 1/7] install: Installing NuGet packages for src\VolunteerSquared.BouncedEmailService\packages.config
+[08:04:10] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\src\VolunteerSquared.BouncedEmailService\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:10] :		 [install] in directory: C:\TeamCity_PullRequests\src\VolunteerSquared.BouncedEmailService
+[08:04:10] :		 [install] Feeds used:
+[08:04:10] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:10] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:10] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:10] :		 [install] 
+[08:04:10] :		 [install] Restoring NuGet package Serilog.3.1.1.
+[08:04:10] :		 [install] Restoring NuGet package Serilog.Sinks.File.5.0.0.
+[08:04:11] :		 [install] Adding package 'Serilog.Sinks.File.5.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Adding package 'Serilog.3.1.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Added package 'Serilog.Sinks.File.5.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Added package 'Serilog.3.1.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Process exited with code 0
+[08:04:11] :	 [Step 1/7] install: Installing NuGet packages for src\VolunteerSquared.FlickrIdLookup\packages.config
+[08:04:11] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\src\VolunteerSquared.FlickrIdLookup\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:11] :		 [install] in directory: C:\TeamCity_PullRequests\src\VolunteerSquared.FlickrIdLookup
+[08:04:11] :		 [install] Feeds used:
+[08:04:11] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:11] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:11] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:11] :		 [install] 
+[08:04:11] :		 [install] Restoring NuGet package Antlr.3.4.1.9004.
+[08:04:11] :		 [install] Restoring NuGet package Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0.
+[08:04:11] :		 [install] Restoring NuGet package Microsoft.AspNet.Web.Optimization.1.1.3.
+[08:04:11] :		 [install] Restoring NuGet package FlickrNet.3.22.0.
+[08:04:11] :		 [install] Restoring NuGet package WebGrease.1.5.2.
+[08:04:11] :		 [install] Restoring NuGet package Microsoft.Net.Compilers.1.0.0.
+[08:04:11] :		 [install] Adding package 'Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Adding package 'FlickrNet.3.22.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Adding package 'Microsoft.AspNet.Web.Optimization.1.1.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Adding package 'Microsoft.Net.Compilers.1.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Adding package 'Antlr.3.4.1.9004' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Adding package 'WebGrease.1.5.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Added package 'Microsoft.AspNet.Web.Optimization.1.1.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Added package 'FlickrNet.3.22.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Added package 'Antlr.3.4.1.9004' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Added package 'Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Added package 'WebGrease.1.5.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:11] :		 [install] Added package 'Microsoft.Net.Compilers.1.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:12] :		 [install] Process exited with code 0
+[08:04:12] :	 [Step 1/7] install: Installing NuGet packages for src\VolunteerSquared.Tasks\packages.config
+[08:04:12] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\src\VolunteerSquared.Tasks\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:12] :		 [install] in directory: C:\TeamCity_PullRequests\src\VolunteerSquared.Tasks
+[08:04:12] :		 [install] Feeds used:
+[08:04:12] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:12] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:12] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:12] :		 [install] 
+[08:04:12] :		 [install] Restoring NuGet package PagedList.1.17.0.
+[08:04:12] :		 [install] Adding package 'PagedList.1.17.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:12] :		 [install] Added package 'PagedList.1.17.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:12] :		 [install] Process exited with code 0
+[08:04:12] :	 [Step 1/7] install: Installing NuGet packages for tests\VolunteerSquared.UnitTests\packages.config (1s)
+[08:04:12] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\tests\VolunteerSquared.UnitTests\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:12] :		 [install] in directory: C:\TeamCity_PullRequests\tests\VolunteerSquared.UnitTests
+[08:04:13] :		 [install] Feeds used:
+[08:04:13] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:13] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:13] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:13] :		 [install] 
+[08:04:13] :		 [install] Restoring NuGet package Microsoft.CodeCoverage.17.14.1.
+[08:04:13] :		 [install] Restoring NuGet package Microsoft.NET.Test.Sdk.17.14.1.
+[08:04:13] :		 [install] Restoring NuGet package Microsoft.SqlServer.TransactSql.ScriptDom.161.9142.1.
+[08:04:13] :		 [install] Restoring NuGet package Microsoft.Testing.Extensions.Telemetry.1.0.2.
+[08:04:13] :		 [install] Restoring NuGet package Microsoft.Testing.Extensions.TrxReport.Abstractions.1.0.2.
+[08:04:13] :		 [install] Restoring NuGet package Microsoft.Testing.Extensions.VSTestBridge.1.0.2.
+[08:04:13] :		 [install] Restoring NuGet package Microsoft.ApplicationInsights.2.21.0.
+[08:04:13] :		 [install] Restoring NuGet package Microsoft.Testing.Platform.1.0.2.
+[08:04:13] :		 [install] Adding package 'Microsoft.Testing.Platform.1.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Adding package 'Microsoft.ApplicationInsights.2.21.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Adding package 'Microsoft.NET.Test.Sdk.17.14.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Adding package 'Microsoft.CodeCoverage.17.14.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Adding package 'Microsoft.Testing.Extensions.TrxReport.Abstractions.1.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Adding package 'Microsoft.Testing.Extensions.Telemetry.1.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Adding package 'Microsoft.Testing.Extensions.VSTestBridge.1.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Adding package 'Microsoft.SqlServer.TransactSql.ScriptDom.161.9142.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'Microsoft.Testing.Extensions.TrxReport.Abstractions.1.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Restoring NuGet package Microsoft.Testing.Platform.MSBuild.1.0.2.
+[08:04:13] :		 [install] Adding package 'Microsoft.Testing.Platform.MSBuild.1.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'Microsoft.NET.Test.Sdk.17.14.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Restoring NuGet package Microsoft.TestPlatform.ObjectModel.17.5.0.
+[08:04:13] :		 [install] Adding package 'Microsoft.TestPlatform.ObjectModel.17.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'Microsoft.ApplicationInsights.2.21.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Restoring NuGet package Mono.Cecil.0.9.6.4.
+[08:04:13] :		 [install] Adding package 'Mono.Cecil.0.9.6.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'Microsoft.Testing.Extensions.VSTestBridge.1.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Restoring NuGet package Moq.4.14.5.
+[08:04:13] :		 [install] Adding package 'Moq.4.14.5' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'Microsoft.Testing.Extensions.Telemetry.1.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Restoring NuGet package MSTest.TestAdapter.3.2.2.
+[08:04:13] :		 [install] Adding package 'MSTest.TestAdapter.3.2.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'Mono.Cecil.0.9.6.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Restoring NuGet package MSTest.TestFramework.3.2.2.
+[08:04:13] :		 [install] Added package 'Moq.4.14.5' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Restoring NuGet package NuGet.Frameworks.5.11.3.
+[08:04:13] :		 [install] Adding package 'MSTest.TestFramework.3.2.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Adding package 'NuGet.Frameworks.5.11.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'NuGet.Frameworks.5.11.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Restoring NuGet package NUnit.3.12.0.
+[08:04:13] :		 [install] Adding package 'NUnit.3.12.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'Microsoft.Testing.Platform.1.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Restoring NuGet package NUnit3TestAdapter.3.16.1.
+[08:04:13] :		 [install] Adding package 'NUnit3TestAdapter.3.16.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'Microsoft.TestPlatform.ObjectModel.17.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Restoring NuGet package System.Reflection.Metadata.1.6.0.
+[08:04:13] :		 [install] Adding package 'System.Reflection.Metadata.1.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'Microsoft.Testing.Platform.MSBuild.1.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'NUnit3TestAdapter.3.16.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'System.Reflection.Metadata.1.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'NUnit.3.12.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'MSTest.TestFramework.3.2.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'MSTest.TestAdapter.3.2.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'Microsoft.CodeCoverage.17.14.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:13] :		 [install] Added package 'Microsoft.SqlServer.TransactSql.ScriptDom.161.9142.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:14] :		 [install] Process exited with code 0
+[08:04:14] :	 [Step 1/7] install: Installing NuGet packages for src\VolunteerSquared.BulkEmailSendingService.Impl\packages.config
+[08:04:14] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\src\VolunteerSquared.BulkEmailSendingService.Impl\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:14] :		 [install] in directory: C:\TeamCity_PullRequests\src\VolunteerSquared.BulkEmailSendingService.Impl
+[08:04:14] :		 [install] Feeds used:
+[08:04:14] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:14] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:14] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:14] :		 [install] 
+[08:04:14] :		 [install] All packages listed in C:\TeamCity_PullRequests\src\VolunteerSquared.BulkEmailSendingService.Impl\packages.config are already installed.
+[08:04:14] :		 [install] Process exited with code 0
+[08:04:14] :	 [Step 1/7] install: Installing NuGet packages for src\VolunteerSquared.Infrastructure\packages.config (1s)
+[08:04:14] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\src\VolunteerSquared.Infrastructure\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:14] :		 [install] in directory: C:\TeamCity_PullRequests\src\VolunteerSquared.Infrastructure
+[08:04:15] :		 [install] Feeds used:
+[08:04:15] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:15] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:15] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:15] :		 [install] 
+[08:04:15] :		 [install] Restoring NuGet package Azure.Storage.Common.12.13.0.
+[08:04:15] :		 [install] Restoring NuGet package APIMatic.Core.0.4.6.
+[08:04:15] :		 [install] Restoring NuGet package BCrypt.Net-Next.2.1.2.
+[08:04:15] :		 [install] Restoring NuGet package Azure.Storage.Blobs.12.13.0.
+[08:04:15] :		 [install] Restoring NuGet package Azure.Core.1.25.0.
+[08:04:15] :		 [install] Restoring NuGet package Data.HashFunction.Core.3.1.2.
+[08:04:15] :		 [install] Restoring NuGet package BitMiracle.Docotic.Pdf.9.8.18634.
+[08:04:15] :		 [install] Restoring NuGet package Data.HashFunction.Interfaces.3.1.2.
+[08:04:15] :		 [install] Adding package 'Azure.Storage.Common.12.13.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'Azure.Core.1.25.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'Azure.Storage.Blobs.12.13.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'BCrypt.Net-Next.2.1.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'APIMatic.Core.0.4.6' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'Data.HashFunction.Interfaces.3.1.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'Data.HashFunction.Core.3.1.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'BitMiracle.Docotic.Pdf.9.8.18634' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'APIMatic.Core.0.4.6' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Data.HashFunction.Interfaces.3.1.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Data.HashFunction.Core.3.1.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package Data.HashFunction.MurmurHash.3.1.2.
+[08:04:15] :		 [install] Restoring NuGet package DnsClient.1.2.0.
+[08:04:15] :		 [install] Restoring NuGet package EvoPdf.PdfMerge.7.1.0.
+[08:04:15] :		 [install] Added package 'Azure.Storage.Common.12.13.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package EWSoftware.PDI.2018.12.1.
+[08:04:15] :		 [install] Adding package 'Data.HashFunction.MurmurHash.3.1.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'DnsClient.1.2.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'EvoPdf.PdfMerge.7.1.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'EWSoftware.PDI.2018.12.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Data.HashFunction.MurmurHash.3.1.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package FileSignatures.4.4.1.
+[08:04:15] :		 [install] Adding package 'FileSignatures.4.4.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'EWSoftware.PDI.2018.12.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package Google.Protobuf.3.20.1.
+[08:04:15] :		 [install] Added package 'FileSignatures.4.4.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package Handlebars.Net.1.10.1.
+[08:04:15] :		 [install] Adding package 'Google.Protobuf.3.20.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'Handlebars.Net.1.10.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'BCrypt.Net-Next.2.1.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'DnsClient.1.2.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package HtmlAgilityPack.1.11.3.
+[08:04:15] :		 [install] Restoring NuGet package KGySoft.CoreLibraries.9.0.0.
+[08:04:15] :		 [install] Adding package 'KGySoft.CoreLibraries.9.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'HtmlAgilityPack.1.11.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Handlebars.Net.1.10.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Azure.Core.1.25.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package Maxio.AdvancedBillingSdk.6.1.0.
+[08:04:15] :		 [install] Restoring NuGet package Microsoft.CSharp.4.7.0.
+[08:04:15] :		 [install] Adding package 'Maxio.AdvancedBillingSdk.6.1.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'Microsoft.CSharp.4.7.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Azure.Storage.Blobs.12.13.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package Microsoft.Json.Pointer.2.3.0.
+[08:04:15] :		 [install] Adding package 'Microsoft.Json.Pointer.2.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Microsoft.Json.Pointer.2.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package Nager.PublicSuffix.2.4.0.
+[08:04:15] :		 [install] Adding package 'Nager.PublicSuffix.2.4.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Nager.PublicSuffix.2.4.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package NHibernate.Caches.RtMemoryCache.5.9.0.
+[08:04:15] :		 [install] Adding package 'NHibernate.Caches.RtMemoryCache.5.9.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'EvoPdf.PdfMerge.7.1.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package NHibernateProfiler.Appender.6.0.6040.
+[08:04:15] :		 [install] Adding package 'NHibernateProfiler.Appender.6.0.6040' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'NHibernate.Caches.RtMemoryCache.5.9.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package Nito.AspNetBackgroundTasks.1.0.0.
+[08:04:15] :		 [install] Adding package 'Nito.AspNetBackgroundTasks.1.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Nito.AspNetBackgroundTasks.1.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package OpenMcdf.2.2.1.9.
+[08:04:15] :		 [install] Added package 'Google.Protobuf.3.20.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Maxio.AdvancedBillingSdk.6.1.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package Polly.7.2.3.
+[08:04:15] :		 [install] Restoring NuGet package RedisMemoryCacheInvalidationCore.2.4.0.
+[08:04:15] :		 [install] Adding package 'OpenMcdf.2.2.1.9' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'Polly.7.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'RedisMemoryCacheInvalidationCore.2.4.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'OpenMcdf.2.2.1.9' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'NHibernateProfiler.Appender.6.0.6040' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package Serilog.4.0.2.
+[08:04:15] :		 [install] Restoring NuGet package Serilog.Sinks.Graylog.3.1.1.
+[08:04:15] :		 [install] Adding package 'Serilog.4.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'Serilog.Sinks.Graylog.3.1.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'RedisMemoryCacheInvalidationCore.2.4.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package Serilog.Sinks.Graylog.Batching.3.0.3.
+[08:04:15] :		 [install] Adding package 'Serilog.Sinks.Graylog.Batching.3.0.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Serilog.Sinks.Graylog.3.1.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package Serilog.Sinks.PeriodicBatching.3.1.0.
+[08:04:15] :		 [install] Adding package 'Serilog.Sinks.PeriodicBatching.3.1.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Serilog.Sinks.Graylog.Batching.3.0.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package Simple.AES.2.0.2.
+[08:04:15] :		 [install] Adding package 'Simple.AES.2.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Polly.7.2.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package Stripe.net.39.80.0.
+[08:04:15] :		 [install] Adding package 'Stripe.net.39.80.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Simple.AES.2.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package System.Configuration.ConfigurationManager.8.0.0.
+[08:04:15] :		 [install] Adding package 'System.Configuration.ConfigurationManager.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Serilog.Sinks.PeriodicBatching.3.1.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Serilog.4.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Microsoft.CSharp.4.7.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package System.IO.Hashing.6.0.0.
+[08:04:15] :		 [install] Restoring NuGet package System.Memory.Data.1.0.2.
+[08:04:15] :		 [install] Restoring NuGet package System.Runtime.Caching.8.0.0.
+[08:04:15] :		 [install] Adding package 'System.Memory.Data.1.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'HtmlAgilityPack.1.11.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'System.IO.Hashing.6.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package System.Runtime.InteropServices.RuntimeInformation.4.3.0.
+[08:04:15] :		 [install] Adding package 'System.Runtime.Caching.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'System.Runtime.InteropServices.RuntimeInformation.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'System.Memory.Data.1.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package System.Runtime.Numerics.4.3.0.
+[08:04:15] :		 [install] Adding package 'System.Runtime.Numerics.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'System.IO.Hashing.6.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package System.Text.RegularExpressions.4.3.1.
+[08:04:15] :		 [install] Adding package 'System.Text.RegularExpressions.4.3.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'System.Runtime.InteropServices.RuntimeInformation.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package TwoFactorAuth.Net.1.3.6.
+[08:04:15] :		 [install] Adding package 'TwoFactorAuth.Net.1.3.6' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'System.Runtime.Caching.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'System.Configuration.ConfigurationManager.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Restoring NuGet package WebActivator.1.4.4.
+[08:04:15] :		 [install] Restoring NuGet package WorkOS.net.2.5.0.
+[08:04:15] :		 [install] Adding package 'WebActivator.1.4.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Adding package 'WorkOS.net.2.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'WebActivator.1.4.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'WorkOS.net.2.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'TwoFactorAuth.Net.1.3.6' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'Stripe.net.39.80.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'System.Runtime.Numerics.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'BitMiracle.Docotic.Pdf.9.8.18634' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'System.Text.RegularExpressions.4.3.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:15] :		 [install] Added package 'KGySoft.CoreLibraries.9.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:16] :		 [install] Process exited with code 0
+[08:04:16] :	 [Step 1/7] install: Installing NuGet packages for src\VolunteerSquared.Init\packages.config
+[08:04:16] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\src\VolunteerSquared.Init\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:16] :		 [install] in directory: C:\TeamCity_PullRequests\src\VolunteerSquared.Init
+[08:04:16] :		 [install] Feeds used:
+[08:04:16] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:16] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:16] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:16] :		 [install] 
+[08:04:16] :		 [install] All packages listed in C:\TeamCity_PullRequests\src\VolunteerSquared.Init\packages.config are already installed.
+[08:04:16] :		 [install] Process exited with code 0
+[08:04:16] :	 [Step 1/7] install: Installing NuGet packages for tests\VolunteerSquared.IntegrationTests\packages.config
+[08:04:16] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\tests\VolunteerSquared.IntegrationTests\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:16] :		 [install] in directory: C:\TeamCity_PullRequests\tests\VolunteerSquared.IntegrationTests
+[08:04:17] :		 [install] Feeds used:
+[08:04:17] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:17] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:17] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:17] :		 [install] 
+[08:04:17] :		 [install] Restoring NuGet package theBrent.Oath.1.0.6473.20839.
+[08:04:17] :		 [install] Adding package 'theBrent.Oath.1.0.6473.20839' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:17] :		 [install] Added package 'theBrent.Oath.1.0.6473.20839' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:17] :		 [install] Process exited with code 0
+[08:04:17] :	 [Step 1/7] install: Installing NuGet packages for src\VolunteerSquared.AlternateEnglishTranslationComparer\packages.config
+[08:04:17] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\src\VolunteerSquared.AlternateEnglishTranslationComparer\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:17] :		 [install] in directory: C:\TeamCity_PullRequests\src\VolunteerSquared.AlternateEnglishTranslationComparer
+[08:04:18] :		 [install] Feeds used:
+[08:04:18] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:18] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:18] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:18] :		 [install] 
+[08:04:18] :		 [install] Restoring NuGet package DiffPlex.1.4.4.
+[08:04:18] :		 [install] Restoring NuGet package PropertyChanged.Fody.2.5.9.
+[08:04:18] :		 [install] Restoring NuGet package Fody.3.1.4.
+[08:04:18] :		 [install] Adding package 'DiffPlex.1.4.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:18] :		 [install] Adding package 'Fody.3.1.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:18] :		 [install] Adding package 'PropertyChanged.Fody.2.5.9' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:18] :		 [install] Added package 'DiffPlex.1.4.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:18] :		 [install] Added package 'PropertyChanged.Fody.2.5.9' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:18] :		 [install] Added package 'Fody.3.1.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:18] :		 [install] Process exited with code 0
+[08:04:18] :	 [Step 1/7] install: Installing NuGet packages for src\VolunteerSquared.SuperSearchAndReplace\packages.config
+[08:04:18] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\src\VolunteerSquared.SuperSearchAndReplace\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:18] :		 [install] in directory: C:\TeamCity_PullRequests\src\VolunteerSquared.SuperSearchAndReplace
+[08:04:18] :		 [install] Feeds used:
+[08:04:18] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:18] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:18] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:18] :		 [install] 
+[08:04:18] :		 [install] Restoring NuGet package Fody.3.3.2.
+[08:04:18] :		 [install] Restoring NuGet package PropertyChanged.Fody.2.6.0.
+[08:04:18] :		 [install] Adding package 'Fody.3.3.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:18] :		 [install] Adding package 'PropertyChanged.Fody.2.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:18] :		 [install] Added package 'PropertyChanged.Fody.2.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Fody.3.3.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Process exited with code 0
+[08:04:19] :	 [Step 1/7] install: Installing NuGet packages for src\VolunteerSquared.WebCalendarProvider\packages.config (1s)
+[08:04:19] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\src\VolunteerSquared.WebCalendarProvider\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:19] :		 [install] in directory: C:\TeamCity_PullRequests\src\VolunteerSquared.WebCalendarProvider
+[08:04:19] :		 [install] Feeds used:
+[08:04:19] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:19] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:19] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:19] :		 [install] 
+[08:04:19] :		 [install] Restoring NuGet package Azure.Core.1.38.0.
+[08:04:19] :		 [install] Restoring NuGet package Azure.Identity.1.11.4.
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.AspNet.WebPages.3.2.7.
+[08:04:19] :		 [install] Restoring NuGet package Antlr.3.5.0.2.
+[08:04:19] :		 [install] Restoring NuGet package elmah.corelibrary.1.2.0.
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.AspNet.Razor.3.2.7.
+[08:04:19] :		 [install] Restoring NuGet package Dapper.2.1.66.
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.AspNet.Mvc.5.2.7.
+[08:04:19] :		 [install] Adding package 'Azure.Core.1.38.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Adding package 'Azure.Identity.1.11.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Adding package 'Microsoft.AspNet.WebPages.3.2.7' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Adding package 'Microsoft.AspNet.Mvc.5.2.7' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Adding package 'Antlr.3.5.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Adding package 'elmah.corelibrary.1.2.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Adding package 'Dapper.2.1.66' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Adding package 'Microsoft.AspNet.Razor.3.2.7' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'elmah.corelibrary.1.2.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.Bcl.AsyncInterfaces.9.0.1.
+[08:04:19] :		 [install] Adding package 'Microsoft.Bcl.AsyncInterfaces.9.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Antlr.3.5.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.Bcl.Cryptography.8.0.0.
+[08:04:19] :		 [install] Added package 'Microsoft.AspNet.Razor.3.2.7' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.Data.SqlClient.6.0.1.
+[08:04:19] :		 [install] Adding package 'Microsoft.Bcl.Cryptography.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Adding package 'Microsoft.Data.SqlClient.6.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Azure.Identity.1.11.4' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.Data.SqlClient.SNI.6.0.2.
+[08:04:19] :		 [install] Adding package 'Microsoft.Data.SqlClient.SNI.6.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.AspNet.Mvc.5.2.7' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.Extensions.Caching.Abstractions.8.0.0.
+[08:04:19] :		 [install] Added package 'Microsoft.AspNet.WebPages.3.2.7' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.Extensions.Caching.Memory.8.0.1.
+[08:04:19] :		 [install] Adding package 'Microsoft.Extensions.Caching.Abstractions.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Adding package 'Microsoft.Extensions.Caching.Memory.8.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Dapper.2.1.66' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2.
+[08:04:19] :		 [install] Adding package 'Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.Bcl.AsyncInterfaces.9.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.Extensions.Logging.Abstractions.8.0.2.
+[08:04:19] :		 [install] Adding package 'Microsoft.Extensions.Logging.Abstractions.8.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.Bcl.Cryptography.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.Extensions.Options.8.0.2.
+[08:04:19] :		 [install] Adding package 'Microsoft.Extensions.Options.8.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Azure.Core.1.38.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.Extensions.Primitives.8.0.0.
+[08:04:19] :		 [install] Adding package 'Microsoft.Extensions.Primitives.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.Extensions.Caching.Abstractions.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.Identity.Client.4.61.3.
+[08:04:19] :		 [install] Added package 'Microsoft.Extensions.Caching.Memory.8.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Adding package 'Microsoft.Identity.Client.4.61.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.Identity.Client.Extensions.Msal.4.61.3.
+[08:04:19] :		 [install] Adding package 'Microsoft.Identity.Client.Extensions.Msal.4.61.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.Identity.Client.Extensions.Msal.4.61.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.IdentityModel.JsonWebTokens.7.5.0.
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.IdentityModel.Abstractions.7.5.0.
+[08:04:19] :		 [install] Adding package 'Microsoft.IdentityModel.JsonWebTokens.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Adding package 'Microsoft.IdentityModel.Abstractions.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.Extensions.Primitives.8.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.IdentityModel.Logging.7.5.0.
+[08:04:19] :		 [install] Adding package 'Microsoft.IdentityModel.Logging.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.IdentityModel.Abstractions.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.IdentityModel.Protocols.7.5.0.
+[08:04:19] :		 [install] Adding package 'Microsoft.IdentityModel.Protocols.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.Data.SqlClient.SNI.6.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.IdentityModel.Protocols.OpenIdConnect.7.5.0.
+[08:04:19] :		 [install] Adding package 'Microsoft.IdentityModel.Protocols.OpenIdConnect.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.IdentityModel.JsonWebTokens.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Microsoft.IdentityModel.Tokens.7.5.0.
+[08:04:19] :		 [install] Adding package 'Microsoft.IdentityModel.Tokens.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.Extensions.Options.8.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Modernizr.2.8.3.
+[08:04:19] :		 [install] Adding package 'Modernizr.2.8.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.IdentityModel.Logging.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package Newtonsoft.Json.13.0.3.
+[08:04:19] :		 [install] Adding package 'Newtonsoft.Json.13.0.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.IdentityModel.Protocols.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package System.ClientModel.1.0.0.
+[08:04:19] :		 [install] Added package 'Modernizr.2.8.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package System.IdentityModel.Tokens.Jwt.7.5.0.
+[08:04:19] :		 [install] Adding package 'System.ClientModel.1.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Adding package 'System.IdentityModel.Tokens.Jwt.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.IdentityModel.Protocols.OpenIdConnect.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package System.IO.FileSystem.AccessControl.5.0.0.
+[08:04:19] :		 [install] Adding package 'System.IO.FileSystem.AccessControl.5.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'System.ClientModel.1.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package System.Security.AccessControl.5.0.0.
+[08:04:19] :		 [install] Adding package 'System.Security.AccessControl.5.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Added package 'Microsoft.IdentityModel.Tokens.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package System.Security.Cryptography.Pkcs.8.0.1.
+[08:04:19] :		 [install] Added package 'Microsoft.Extensions.Logging.Abstractions.8.0.2' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package System.Security.Cryptography.ProtectedData.4.7.0.
+[08:04:19] :		 [install] Added package 'System.IdentityModel.Tokens.Jwt.7.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Restoring NuGet package System.Security.Principal.Windows.5.0.0.
+[08:04:19] :		 [install] Adding package 'System.Security.Cryptography.Pkcs.8.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Adding package 'System.Security.Cryptography.ProtectedData.4.7.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:19] :		 [install] Adding package 'System.Security.Principal.Windows.5.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Added package 'Microsoft.Identity.Client.4.61.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Restoring NuGet package System.Text.Encodings.Web.6.0.0.
+[08:04:20] :		 [install] Adding package 'System.Text.Encodings.Web.6.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Added package 'System.IO.FileSystem.AccessControl.5.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Restoring NuGet package System.Text.Json.6.0.10.
+[08:04:20] :		 [install] Adding package 'System.Text.Json.6.0.10' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Added package 'System.Text.Encodings.Web.6.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Restoring NuGet package WebGrease.1.6.0.
+[08:04:20] :		 [install] Adding package 'WebGrease.1.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Added package 'System.Security.Cryptography.ProtectedData.4.7.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Added package 'System.Security.AccessControl.5.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Added package 'Newtonsoft.Json.13.0.3' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Added package 'System.Security.Cryptography.Pkcs.8.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Added package 'WebGrease.1.6.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Added package 'System.Security.Principal.Windows.5.0.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Added package 'System.Text.Json.6.0.10' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Added package 'Microsoft.Data.SqlClient.6.0.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:20] :		 [install] Process exited with code 0
+[08:04:20] :	 [Step 1/7] install: Installing NuGet packages for src\VolunteerSquared.DatabaseMigrations\packages.config
+[08:04:20] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\src\VolunteerSquared.DatabaseMigrations\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:20] :		 [install] in directory: C:\TeamCity_PullRequests\src\VolunteerSquared.DatabaseMigrations
+[08:04:20] :		 [install] Feeds used:
+[08:04:20] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:20] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:20] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:20] :		 [install] 
+[08:04:21] :		 [install] Restoring NuGet package dbup-core.4.5.0.
+[08:04:21] :		 [install] Restoring NuGet package dbup-sqlserver.4.5.0.
+[08:04:21] :		 [install] Restoring NuGet package Microsoft.Azure.Services.AppAuthentication.1.3.1.
+[08:04:21] :		 [install] Restoring NuGet package Microsoft.IdentityModel.Clients.ActiveDirectory.4.3.0.
+[08:04:21] :		 [install] Adding package 'dbup-core.4.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:21] :		 [install] Adding package 'dbup-sqlserver.4.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:21] :		 [install] Adding package 'Microsoft.Azure.Services.AppAuthentication.1.3.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:21] :		 [install] Adding package 'Microsoft.IdentityModel.Clients.ActiveDirectory.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:21] :		 [install] Added package 'dbup-sqlserver.4.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:21] :		 [install] Added package 'dbup-core.4.5.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:21] :		 [install] Added package 'Microsoft.Azure.Services.AppAuthentication.1.3.1' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:21] :		 [install] Added package 'Microsoft.IdentityModel.Clients.ActiveDirectory.4.3.0' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:21] :		 [install] Process exited with code 0
+[08:04:21] :	 [Step 1/7] install: Installing NuGet packages for src\VolunteerSquared.Core\packages.config
+[08:04:21] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\src\VolunteerSquared.Core\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:21] :		 [install] in directory: C:\TeamCity_PullRequests\src\VolunteerSquared.Core
+[08:04:21] :		 [install] Feeds used:
+[08:04:21] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:21] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:21] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:21] :		 [install] 
+[08:04:21] :		 [install] Restoring NuGet package AngleSharp.0.9.11.
+[08:04:21] :		 [install] Restoring NuGet package HtmlSanitizer.4.0.217.
+[08:04:21] :		 [install] Adding package 'HtmlSanitizer.4.0.217' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:21] :		 [install] Adding package 'AngleSharp.0.9.11' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:21] :		 [install] Added package 'HtmlSanitizer.4.0.217' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:21] :		 [install] Added package 'AngleSharp.0.9.11' to folder 'C:\TeamCity_PullRequests\packages'
+[08:04:22] :		 [install] Process exited with code 0
+[08:04:22] :	 [Step 1/7] install: Installing NuGet packages for src\VolunteerSquared.BulkEmailSendingService.ServiceHost\packages.config
+[08:04:22] :		 [install] Starting: C:\BuildAgent\tools\NuGet.CommandLine.4.5.1\tools\NuGet.exe install C:\TeamCity_PullRequests\src\VolunteerSquared.BulkEmailSendingService.ServiceHost\packages.config -OutputDirectory C:\TeamCity_PullRequests\packages -Source https://www.nuget.org/api/v2/ -Source https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:22] :		 [install] in directory: C:\TeamCity_PullRequests\src\VolunteerSquared.BulkEmailSendingService.ServiceHost
+[08:04:22] :		 [install] Feeds used:
+[08:04:22] :		 [install]   C:\Users\Administrator\.nuget\packages\
+[08:04:22] :		 [install]   https://www.nuget.org/api/v2/
+[08:04:22] :		 [install]   https://www.myget.org/F/betterimpact/auth/21e8fcf0-bf74-4185-be85-70c933ffb911/api/v3/index.json
+[08:04:22] :		 [install] 
+[08:04:22] :		 [install] All packages listed in C:\TeamCity_PullRequests\src\VolunteerSquared.BulkEmailSendingService.ServiceHost\packages.config are already installed.
+[08:04:22] :		 [install] Process exited with code 0
+[08:04:22]E: Step 2/7: Check for project include files that are missing (PowerShell) (11s)
+[08:04:22]i:	 [Step 2/7] PowerShell running in non-virtual agent context
+[08:04:22] :	 [Step 2/7] PowerShell Executable: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+[08:04:22] :	 [Step 2/7] Working directory: C:\TeamCity_PullRequests
+[08:04:22] :	 [Step 2/7] Command: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+[08:04:22] :	 [Step 2/7] PowerShell arguments: -NoProfile, -NonInteractive, -ExecutionPolicy, ByPass, -File, C:\TeamCity_PullRequests\.githooks\ensureNoProjectIncludeFilesMissing.ps1
+[08:04:34] :	 [Step 2/7] Githook - Project Files reference files that do not exist
+[08:04:34] :	 [Step 2/7] C:\TeamCity_PullRequests\src\VolunteerSquared.Web\bin\EWSoftware.PDI.dll
+[08:04:34] :	 [Step 2/7] 
+[08:04:34]W:	 [Step 2/7] Process exited with code 1
+[08:04:34]E:	 [Step 2/7] Process exited with code 1 (Step: Check for project include files that are missing (PowerShell))
+[08:04:34]E:	 [Step 2/7] Step Check for project include files that are missing (PowerShell) failed
+[08:04:34]W: Step 3/7: Check for improper comments in Views (PowerShell)
+[08:04:34]W:	 [Step 3/7] Build step Check for improper comments in Views (PowerShell) is skipped because the previous step has failed
+[08:04:34]W: Step 4/7: ESLinter (Command Line)
+[08:04:34]W:	 [Step 4/7] Build step ESLinter (Command Line) is skipped because the previous step has failed
+[08:04:34]W: Step 5/7: Visual Studio (sln) (.NET)
+[08:04:34]W:	 [Step 5/7] Build step Visual Studio (sln) (.NET) is skipped because the previous step has failed
+[08:04:34]W: Step 6/7: Nunit - Unit Tests (NUnit)
+[08:04:34]W:	 [Step 6/7] Build step Nunit - Unit Tests (NUnit) is skipped because the previous step has failed
+[08:04:34] : Step 7/7: Compress Artifacts (PowerShell)
+[08:04:34] :	 [Step 7/7] Disabled build step Compress Artifacts (PowerShell) is skipped
+[08:04:34] : Publishing artifacts
+[08:04:34] :	 [Publishing artifacts] Collecting files to publish: [C:\BuildAgent\temp\buildTmp\nuget6442626093800295174packages\nuget.xml => .teamcity/nuget]
+[08:04:34] :	 [Publishing artifacts] Publishing 1 file using [WebPublisher]: C:/BuildAgent/temp/buildTmp/nuget6442626093800295174packages/nuget.xml => .teamcity/nuget
+[08:04:34] :	 [Publishing artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]: C:/BuildAgent/temp/buildTmp/nuget6442626093800295174packages/nuget.xml => .teamcity/nuget
+[08:04:34]i:	 [Publishing artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[08:04:34] : Publishing internal artifacts
+[08:04:34] :	 [Publishing internal artifacts] Publishing 1 file using [WebPublisher]
+[08:04:34] :	 [Publishing internal artifacts] Publishing 1 file using [ArtifactsCachePublisherImpl]
+[08:04:34]i:	 [Publishing internal artifacts] Will publish 1 artifact(s) to TeamCity node with id MAIN_SERVER
+[08:04:35] : Build is failed. Artifacts will not be published for this build
+[08:04:36] : Build finished
